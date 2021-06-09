@@ -1,0 +1,162 @@
+cards{
+    margin-top: -30px;
+}
+
+.cards{
+    margin: 1rem auto 0rem auto;
+    height: 100%;
+    padding: 1rem 0rem;
+}
+
+.card{
+    border-radius: 0.5rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);   
+    box-shadow: 2px 3px 10px rgb(0 0 0 / 35%);
+    transition-property: all !important;
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease-in-out !important;
+}
+
+.card:hover{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-0.8px);
+    cursor: pointer !important;
+}
+
+.head{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem !important;
+    font-size: 2.5rem !important;
+}
+
+.next {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0 0rem 0;
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+}
+
+.next-btn {
+    width: 25%;
+    font-weight: 500;
+}
+
+
+
+/* CARDS COMMON STYLING  */
+.icon_1{
+    width: 10rem;
+    margin: 0.5rem auto 1rem auto;
+    border-radius: 50%;
+}
+
+
+.card-body{
+    margin-top: -1rem;
+}
+
+
+.card .card-body {
+    padding: 20px 15px 20px 15px !important;
+}
+
+
+.bt-1{
+    border-radius: 0.4rem !important;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 6.3rem;
+    font-size: 1.1rem;
+}
+
+
+.bt-1a{
+    width: 3.3rem !important;
+    height: 2.5rem !important;
+    border-radius: 1.3rem !important;
+}
+
+.bt-1b{
+    width: 3.8rem !important;
+}
+
+.email{
+    width: 105%;
+    margin: -5px auto -2px 0px;
+}
+
+
+.footer{
+    margin-top: 0.8rem;
+    margin-bottom: -2rem;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.btn-link{
+    text-decoration: none !important;
+    transition-property: all;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    border-radius: 0.5rem !important;
+    display: block;
+    width: 100%;
+}
+
+.btn-link:hover{
+    color: white;
+    background-color: #0d6efd;
+}
+
+
+.h6,h6 {
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: Poppins;
+    font-weight: 500;
+
+}
+
+/* STYLING THE ICONS OF ALL CARDS */
+
+.icon_2{
+    width: 5rem;
+    margin: 0.35rem auto 0.5rem auto;
+}
+
+.icon_3{
+    width: 6rem;
+    margin: -0.35rem auto 0.5rem auto;
+}
+
+.icon_4{
+    width: 6rem;
+    margin: 0 auto;
+}
+
+.icon_5{
+    width: 6rem;
+    margin: 0 auto;
+}
+
+.icon_6{
+     width: 6rem;
+    margin: 0 auto;
+}
+
+.icon_7{
+    width: 6rem;
+   margin: 0.2rem auto;
+}
+
+.icon_8{
+    width: 6rem;
+   margin: 0.2rem auto;
+}
+
+.icon_9{
+    width: 6rem;
+   margin: 0.2rem auto;
+}
