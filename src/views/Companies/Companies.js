@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from "react";
 import '../../components/Card/Card.css';
 import Card from '../../components/Card/Card';
-import { getStudents } from "../../actions/students";
+import { getCompanies } from "../../actions/companies";
 import { useSelector, useDispatch } from 'react-redux';
 
-function Students() {
+function Companies() {
 
-    // let [students, setStudents] = useState([])
+    // let [companies, setcompanies] = useState([])
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getStudents());
+        dispatch(getCompanies());
     }, [dispatch])
-    const students = useSelector((state) => state.students.students);
-    console.log(students, "students");
+    const companies = useSelector((state) => state.companies.companies);
+    console.log(companies, "companies");
 
     return (
-        !students.length ? <div>    loading </div> : (<div className="container-fluid">
+        !companies.length ? <div>    loading </div> : (<div className="container-fluid">
             <div className="row">
 
                 <div className="col-md-12 text-success">
                     <section id="cards">
 
-                        <p className="h1 text-center text-secondary head">Students.</p>
+                        <p className="h1 text-center text-secondary head">companies.</p>
 
 
                         <div className="container cards">
@@ -32,9 +32,9 @@ function Students() {
                                 <Card />
                                 <Card />
                                 <Card /> */}
-                                {students.map((student, index) => {
+                                {companies.map((companies, index) => {
                                     return (
-                                        <Card key={index} name={student.name} bio={student.bio} />
+                                        <Card key={index} name={companies.name} bio={companies.bio} />
                                     )
                                 })}
                             </div>
@@ -46,4 +46,4 @@ function Students() {
         ))
 }
 
-export default Students
+export default Companies

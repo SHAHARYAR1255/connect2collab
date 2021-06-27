@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from "react";
 import '../../components/Card/Card.css';
 import Card from '../../components/Card/Card';
-import { getStudents } from "../../actions/students";
+import { getMentors } from "../../actions/mentors";
 import { useSelector, useDispatch } from 'react-redux';
 
-function Students() {
+function Mentors() {
 
-    // let [students, setStudents] = useState([])
+    // let [mentors, setmentors] = useState([])
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getStudents());
+        dispatch(getMentors());
     }, [dispatch])
-    const students = useSelector((state) => state.students.students);
-    console.log(students, "students");
+    const mentors = useSelector((state) => state.mentors.mentors);
+    console.log(mentors, "mentors");
 
     return (
-        !students.length ? <div>    loading </div> : (<div className="container-fluid">
+        !mentors.length ? <div>    loading </div> : (<div className="container-fluid">
             <div className="row">
 
                 <div className="col-md-12 text-success">
                     <section id="cards">
 
-                        <p className="h1 text-center text-secondary head">Students.</p>
+                        <p className="h1 text-center text-secondary head">Mentors.</p>
 
 
                         <div className="container cards">
@@ -32,9 +32,9 @@ function Students() {
                                 <Card />
                                 <Card />
                                 <Card /> */}
-                                {students.map((student, index) => {
+                                {mentors.map((mentor, index) => {
                                     return (
-                                        <Card key={index} name={student.name} bio={student.bio} />
+                                        <Card key={index} name={mentor.name} bio={mentor.bio} />
                                     )
                                 })}
                             </div>
@@ -46,4 +46,4 @@ function Students() {
         ))
 }
 
-export default Students
+export default Mentors
