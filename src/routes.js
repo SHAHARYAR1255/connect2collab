@@ -8,25 +8,18 @@ import DashboardCompany from "views/DashboardCompany/DashboardCompany";
 import DashboardMentor from "views/DashboardMentor/DashboardMentor";
 import DashboardStudent from "views/DashboardStudent/DashboardStudent";
 import Internships from "views/Internship/Internships";
-const dashboardRoutes = [
+import ProfileDetailComponent from './components/ProfileDetail/ProfileDetailComponent';
+import Communities from 'views/Communities/Communities';
+import Messages from 'views/Messages/Messages';
+
+export const studentRoutes = [
   {
-    path: "/dashboard-company",
-    name: "Dashboard compny",
-    icon: "nc-icon nc-chart-pie-35",
-    component: DashboardCompany,
-    layout: "/admin",
-  }, {
-    path: "/dashboard-mentor",
-    name: "Dashboard Mentor",
-    icon: "nc-icon nc-chart-pie-35",
-    component: DashboardMentor,
-    layout: "/admin",
-  }, {
     path: "/dashboard-student",
     name: "Dashboard Student",
     icon: "nc-icon nc-chart-pie-35",
-    component: Dashboard,
+    component: DashboardStudent,
     layout: "/admin",
+    hide: false,
   },
   {
     path: "/student-profile",
@@ -35,10 +28,67 @@ const dashboardRoutes = [
     component: UserProfile,
     layout: "/admin",
   }, {
-    path: "/company-profile",
-    name: "Comp Profile",
+    path: "/students",
+    name: "Students",
     icon: "nc-icon nc-circle-09",
-    component: UserProfile,
+    component: Students,
+    layout: "/admin",
+  }, {
+    path: "/mentors",
+    name: "Mentors",
+    icon: "nc-icon nc-circle-09",
+    component: Mentors,
+    layout: "/admin",
+  }, {
+    path: "/companies",
+    name: "Companies",
+    icon: "nc-icon nc-circle-09",
+    component: Companies,
+    layout: "/admin",
+  },
+  {
+    path: "/internships",
+    name: "Internships",
+    icon: "nc-icon nc-circle-09",
+    component: Internships,
+    layout: "/admin",
+  },
+
+  {
+    path: "/notifications",
+    name: "Notifications",
+    icon: "nc-icon nc-bell-55",
+    component: Notifications,
+    layout: "/admin",
+  }, {
+    path: "/messages",
+    name: "Messages",
+    icon: "nc-icon nc-bell-55",
+    component: Messages,
+    layout: "/admin",
+  },
+  {
+    path: "/communites",
+    name: "Communities",
+    icon: "nc-icon nc-bell-55",
+    component: Communities,
+    layout: "/admin",
+  },
+  {
+    path: "/student/:id",
+    name: "deteail",
+    icon: "nc-icon nc-bell-55",
+    component: ProfileDetailComponent,
+    layout: "/admin",
+    hide: true
+  },
+];
+export const mentorRoutes = [
+  {
+    path: "/dashboard-mentor",
+    name: "Dashboard Mentor",
+    icon: "nc-icon nc-chart-pie-35",
+    component: DashboardMentor,
     layout: "/admin",
   }, {
     path: "/mentor-profile",
@@ -83,9 +133,78 @@ const dashboardRoutes = [
     path: "/messages",
     name: "Messages",
     icon: "nc-icon nc-bell-55",
-    component: Notifications,
+    component: Messages,
+    layout: "/admin",
+  },
+  {
+    path: "/communites",
+    name: "Communities",
+    icon: "nc-icon nc-bell-55",
+    component: Communities,
     layout: "/admin",
   },
 ];
+export const companyRoutes = [
+  {
+    path: "/dashboard-company",
+    name: "Dashboard compny",
+    icon: "nc-icon nc-chart-pie-35",
+    component: DashboardCompany,
+    layout: "/admin",
+  },
+  {
+    path: "/company-profile",
+    name: "Comp Profile",
+    icon: "nc-icon nc-circle-09",
+    component: UserProfile,
+    layout: "/admin",
+  }
+  , {
+    path: "/students",
+    name: "Students",
+    icon: "nc-icon nc-circle-09",
+    component: Students,
+    layout: "/admin",
+  }, {
+    path: "/mentors",
+    name: "Mentors",
+    icon: "nc-icon nc-circle-09",
+    component: Mentors,
+    layout: "/admin",
+  }, {
+    path: "/companies",
+    name: "Companies",
+    icon: "nc-icon nc-circle-09",
+    component: Companies,
+    layout: "/admin",
+  },
+  {
+    path: "/post-internship",
+    name: "Post Internship",
+    icon: "nc-icon nc-circle-09",
+    component: Internships,
+    layout: "/admin",
+  },
 
-export default dashboardRoutes;
+  {
+    path: "/notifications",
+    name: "Notifications",
+    icon: "nc-icon nc-bell-55",
+    component: Notifications,
+    layout: "/admin",
+  }, {
+    path: "/messages",
+    name: "Messages",
+    icon: "nc-icon nc-bell-55",
+    component: Messages,
+    layout: "/admin",
+  }, {
+    path: "/communites",
+    name: "Communities",
+    icon: "nc-icon nc-bell-55",
+    component: Communities,
+    layout: "/admin",
+  },
+ 
+];
+

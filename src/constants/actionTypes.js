@@ -13,5 +13,7 @@ export const FETCH_COMPANIES= 'FETCH_COMPANIES';
 export const COMPANIES_LOADING= 'COMPANIES_LOADING';
 export const COMPANIES_FAILED = 'COMPANIES_FAILED';
 
+export const AUTH = 'AUTH';
+export const LOGOUT = 'LOGOUT';
 
 
