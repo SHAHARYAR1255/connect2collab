@@ -1,11 +1,12 @@
 
 import React, { Component } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation , useHistory} from "react-router-dom";
 import { Navbar, Container, Nav, Dropdown, Button } from "react-bootstrap";
 
 // import routes from "routes.js";
 
 function Header() {
+  const history= useHistory() ;
   const location = useLocation();
   const mobileSidebarToggle = (e) => {
     e.preventDefault();
@@ -18,7 +19,12 @@ function Header() {
     };
     document.body.appendChild(node);
   };
-
+  const logout = (e) =>{
+    e.preventDefault();
+    localStorage.clear();
+    console.log('logout');
+    history.push('/auth');
+  }
   const getBrandText = () => {
     // for (let i = 0; i < routes.length; i++) {
     //   if (location.pathname.indexOf(routes[i].layout + routes[i].path) !== -1) {
@@ -54,7 +60,7 @@ function Header() {
               <Nav.Link
                 className="m-0"
                 href="#pablo"
-                onClick={(e) => e.preventDefault()}
+                onClick={(e)=> logout(e)}
               >
                 <span className="no-icon">Log out</span>
               </Nav.Link>

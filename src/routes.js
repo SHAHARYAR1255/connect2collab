@@ -9,18 +9,29 @@ import DashboardMentor from "views/DashboardMentor/DashboardMentor";
 import DashboardStudent from "views/DashboardStudent/DashboardStudent";
 import Internships from "views/Internship/Internships";
 import ProfileDetailComponent from './components/ProfileDetail/ProfileDetailComponent';
+import MentorProfileDetail from './components/MentorProfileDetail/MentorProfileDetail';
+import CompanyProfileDetail from './components/CompanyProfileDetail/CompanyProfileDetail';
 import Communities from 'views/Communities/Communities';
 import Messages from 'views/Messages/Messages';
 
 export const studentRoutes = [
   {
-    path: "/dashboard-student",
+    path: "/dashboard",
     name: "Dashboard Student",
     icon: "nc-icon nc-chart-pie-35",
     component: DashboardStudent,
     layout: "/admin",
     hide: false,
   },
+  {
+    path: "/mentor/:id",
+    name: "Mentor Profile Detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: MentorProfileDetail,
+    layout: "/admin",
+    hide: true,
+  },
+
   {
     path: "/student-profile",
     name: "Std Profile",
@@ -53,7 +64,14 @@ export const studentRoutes = [
     component: Internships,
     layout: "/admin",
   },
-
+  {
+    path: "/company/:id",
+    name: "Company Profile Detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: CompanyProfileDetail,
+    layout: "/admin",
+    hide: true,
+  },
   {
     path: "/notifications",
     name: "Notifications",
@@ -85,11 +103,19 @@ export const studentRoutes = [
 ];
 export const mentorRoutes = [
   {
-    path: "/dashboard-mentor",
+    path: "/dashboard",
     name: "Dashboard Mentor",
     icon: "nc-icon nc-chart-pie-35",
     component: DashboardMentor,
     layout: "/admin",
+  },
+  {
+    path: "/mentor/:id",
+    name: "Mentor Profile Detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: MentorProfileDetail,
+    layout: "/admin",
+    hide: true,
   }, {
     path: "/mentor-profile",
     name: "Mentor Profile",
@@ -122,7 +148,14 @@ export const mentorRoutes = [
     component: Internships,
     layout: "/admin",
   },
-
+  {
+    path: "/company/:id",
+    name: "Company Profile Detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: CompanyProfileDetail,
+    layout: "/admin",
+    hide: true,
+  },
   {
     path: "/notifications",
     name: "Notifications",
@@ -146,11 +179,27 @@ export const mentorRoutes = [
 ];
 export const companyRoutes = [
   {
-    path: "/dashboard-company",
+    path: "/dashboard",
     name: "Dashboard compny",
     icon: "nc-icon nc-chart-pie-35",
     component: DashboardCompany,
     layout: "/admin",
+  },
+  {
+    path: "/company/:id",
+    name: "Company Profile Detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: CompanyProfileDetail,
+    layout: "/admin",
+    hide: true,
+  },
+  {
+    path: "/mentor/:id",
+    name: "Mentor Profile Detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: MentorProfileDetail,
+    layout: "/admin",
+    hide: true,
   },
   {
     path: "/company-profile",
@@ -205,6 +254,6 @@ export const companyRoutes = [
     component: Communities,
     layout: "/admin",
   },
- 
+
 ];
 

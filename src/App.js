@@ -6,31 +6,39 @@ import "./assets/scss/light-bootstrap-dashboard-react.scss?v=2.0.0";
 import "./assets/css/demo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { BrowserRouter, Route, Switch, Redirect, useHistory } from "react-router-dom";
+import {useSelector, useDispatch } from 'react-redux';
+import { AUTH } from './constants/actionTypes';
 
 import AdminLayout from "layouts/Admin.js";
 import Auth from './components/Auth/Auth.js'
 
 const App = () => {
-    // const location = useHistory();
+    const location = useHistory();
+    // const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
 
-    const user = JSON.parse(localStorage.getItem('profile'));
-    // useEffect(() => {
-    //     const token = user?.token;
-    //     //jwt
+    const dispatch = useDispatch();
+    useEffect(() => {
+        // const token = user?.token;
+        //jwt;
+        const a = JSON.parse(localStorage.getItem('profile')) ;
+        if(a){
+            dispatch({ type: AUTH, data: a });
+        }
+        // setUser(JSON.parse(localStorage.getItem('profile')));
 
-    //     setUser(JSON.parse(localStorage.getItem('profile')));
+    }, []);
 
-    // },[location]);
-
-    console.log(user, 'user');
+    const user = useSelector((state) => state.auth.authData);
+    
+    console.log(user, 'user with redux store');
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/admin" component={(props) => <AdminLayout role={user.role} {...props} />} />
-                {/* <Route path="/auth" exact  compoenent={() => <Auth />}/> */}
-                <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/admin" />)} />
-                <Redirect from="/" to="/auth" />
-                
+                <Route path="/admin" component={(props) => (!user ? <Auth /> : <AdminLayout role={user.role} {...props} />)} />
+                {/* <Route path="/auth" exact component={() => } /> */}
+                {/* <Route path="/auth" exact component={() => (!user ? <Auth /> : <Redirect to="/admin" />)} /> */}
+                <Redirect from="/" to="/admin" />
+
             </Switch>
         </BrowserRouter>
     )

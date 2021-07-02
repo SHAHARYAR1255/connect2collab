@@ -5,57 +5,57 @@ import './DashboardCompany.css';
 function DashboardCompany() {
     return (
         <>
-            <div class="row">
+            <div className="row">
 
-                <div class="col-lg-4  col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                        <div class="card-body ">
-                            <div class="row">
-                                <div class="col-5 col-md-4">
-                                    <div class="icon-big text-center icon-warning">
-                                        <i class="nc-icon nc-vector text-danger"></i>
+                <div className="col-lg-4  col-md-6 col-sm-6">
+                    <div className="card card-stats">
+                        <div className="card-body ">
+                            <div className="row">
+                                <div className="col-5 col-md-4">
+                                    <div className="icon-big text-center icon-warning">
+                                        <i className="nc-icon nc-vector text-danger"></i>
                                     </div>
                                 </div>
-                                <div class="col-7 col-md-8">
-                                    <div class="numbers">
-                                        <p class="card-category">Errors</p>
-                                        <p class="card-title">23
+                                <div className="col-7 col-md-8">
+                                    <div className="numbers">
+                                        <p className="card-category">Errors</p>
+                                        <p className="card-title">23
                                   </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer ">
+                        <div className="card-footer ">
                             <hr />
-                            <div class="stats">
-                                <i class="fa fa-clock-o"></i>
+                            <div className="stats">
+                                <i className="fa fa-clock-o"></i>
                               In the last hour
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="card card-stats">
-                        <div class="card-body ">
-                            <div class="row">
-                                <div class="col-5 col-md-4">
-                                    <div class="icon-big text-center icon-warning">
-                                        <i class="nc-icon nc-favourite-28 text-primary"></i>
+                <div className="col-lg-4 col-md-6 col-sm-6">
+                    <div className="card card-stats">
+                        <div className="card-body ">
+                            <div className="row">
+                                <div className="col-5 col-md-4">
+                                    <div className="icon-big text-center icon-warning">
+                                        <i className="nc-icon nc-favourite-28 text-primary"></i>
                                     </div>
                                 </div>
-                                <div class="col-7 col-md-8">
-                                    <div class="numbers">
-                                        <p class="card-category">Followers</p>
-                                        <p class="card-title">+45K
+                                <div className="col-7 col-md-8">
+                                    <div className="numbers">
+                                        <p className="card-category">Followers</p>
+                                        <p className="card-title">+45K
                                   </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-footer ">
+                        <div className="card-footer ">
                             <hr />
-                            <div class="stats">
-                                <i class="fa fa-refresh"></i>
+                            <div className="stats">
+                                <i className="fa fa-refresh"></i>
                               Update now
                             </div>
                         </div>
@@ -74,9 +74,9 @@ export default DashboardCompany
 export function HiredComponent() {
     return (
         <>
-            <div class="container my-new-sec " id="ScrollBar-Design">
+            <div className="container my-new-sec " id="ScrollBar-Design">
                 <SubNav />
-                <div class="container">
+                <div className="container">
                     <Cart />
                     <Cart />
                     <Cart />
@@ -89,17 +89,17 @@ export function HiredComponent() {
 
 export function SubNav() {
     return (
-        <ul class="nav justify-content-around sticky-top sub-nav ">
+        <ul className="nav justify-content-around sticky-top sub-nav ">
 
 
-            <li class="nav-item">
-                <a class="nav-link active active-link" href="#">Hired</a>
+            <li className="nav-item">
+                <a className="nav-link active active-link" href="#">Hired</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Review Application </a>
+            <li className="nav-item">
+                <a className="nav-link" href="#">Review Application </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Post Internship / Jobs </a>
+            <li className="nav-item">
+                <a className="nav-link" href="#">Post Internship / Jobs </a>
             </li>
         </ul>
     )
@@ -107,24 +107,24 @@ export function SubNav() {
 
 export const Cart = () => {
     return (
-        <div class="cart d-flex  flex-wrap justify-content-between">
+        <div className="cart d-flex  flex-wrap justify-content-between">
 
-        <div class="d-flex cart-p1">
-            <div class="cart-pic">
-                <img s src={
+        <div className="d-flex cart-p1">
+            <div className="cart-pic">
+                <img src={
                     require("assets/img/default-avatar.png")
                       .default
                   }  alt="profile-pic" />
             </div>
-            <div class="cart-heading-details">
-                <h2 class="cart-heading">Hunzala Mushtaq</h2>
-                <p class="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
+            <div className="cart-heading-details">
+                <h2 className="cart-heading">Hunzala Mushtaq</h2>
+                <p className="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
             </div>
         </div>
 
-        <div class="cart-p2 d-flex flex-column">
-            <h2 class="status">status</h2>
-            <p class="status-details">Available </p>
+        <div className="cart-p2 d-flex flex-column">
+            <h2 className="status">status</h2>
+            <p className="status-details">Available </p>
         </div>
     </div>
     )
