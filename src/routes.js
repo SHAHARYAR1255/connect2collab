@@ -7,6 +7,7 @@ import Companies from 'views/Companies/Companies.js'
 import DashboardCompany from "views/DashboardCompany/DashboardCompany";
 import DashboardMentor from "views/DashboardMentor/DashboardMentor";
 import DashboardStudent from "views/DashboardStudent/DashboardStudent";
+import PostInternship from "views/PostInternship/PostInternship";
 import Internships from "views/Internship/Internships";
 import ProfileDetailComponent from './components/ProfileDetail/ProfileDetailComponent';
 import MentorProfileDetail from './components/MentorProfileDetail/MentorProfileDetail';
@@ -231,7 +232,7 @@ export const companyRoutes = [
     path: "/post-internship",
     name: "Post Internship",
     icon: "nc-icon nc-circle-09",
-    component: Internships,
+    component: PostInternship,
     layout: "/admin",
   },
 

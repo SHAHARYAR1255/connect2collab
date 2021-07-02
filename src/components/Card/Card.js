@@ -1,7 +1,8 @@
 import React from 'react';
 import './Card.css';
+import {NavLink} from 'react-router-dom';
 
-function Card({ name, bio }) {
+function Card({ name, bio, role, id }) {
     return (
         <div className="col">
             <div className="card h-100">
@@ -28,9 +29,8 @@ function Card({ name, bio }) {
                     <div className="container text-center footer">
                         <button type="button"
                             className="btn btn-link border border-primary">
-                            <p className="h6">View Profile</p>
+                            <p className="h6"><NavLink to={`/admin/${role}/${id}`}>View Profile</NavLink></p>
                         </button>
-
                     </div>
                 </div>
             </div>

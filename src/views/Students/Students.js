@@ -34,7 +34,7 @@ function Students() {
                                 <Card /> */}
                                 {students.map((student, index) => {
                                     return (
-                                        <Card key={index} name={student.name} bio={student.bio} />
+                                        <Card key={index} id={student.id} name={student.name} bio={student.bio} role="student" />
                                     )
                                 })}
                             </div>

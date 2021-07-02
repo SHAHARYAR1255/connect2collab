@@ -34,7 +34,7 @@ function Mentors() {
                                 <Card /> */}
                                 {mentors.map((mentor, index) => {
                                     return (
-                                        <Card key={index} name={mentor.name} bio={mentor.bio} />
+                                        <Card key={index} id={mentor.id} name={mentor.name} bio={mentor.bio} role='mentor' />
                                     )
                                 })}
                             </div>

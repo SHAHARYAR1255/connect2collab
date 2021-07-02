@@ -32,9 +32,9 @@ function Companies() {
                                 <Card />
                                 <Card />
                                 <Card /> */}
-                                {companies.map((companies, index) => {
+                                {companies.map((company, index) => {
                                     return (
-                                        <Card key={index} name={companies.name} bio={companies.bio} />
+                                        <Card key={index} id={company.id} name={company.name} bio={company.bio} role="company" />
                                     )
                                 })}
                             </div>
