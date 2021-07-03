@@ -5,97 +5,73 @@ import './DashboardCompany.css';
 function DashboardCompany() {
     return (
         <>
-      
-
-       
-     
-        <div class="content">
-  
-          <div class="container my-new-sec " id="ScrollBar-Design">
 
 
-            <SubNav />
 
 
-            <div class="container">
+            <div class="content">
 
-              <div class="cart d-flex  flex-wrap justify-content-between">
+                <div class="container my-new-sec " id="ScrollBar-Design">
 
-                <div class="d-flex cart-p1">
-                  <div class="cart-pic">
-                    <img src={
-                    require("assets/img/default-avatar.png").default} alt="profile-pic" />
-                  </div>
-                  <div class="cart-heading-details">
-                    <h2 class="cart-heading">Hunzala Mushtaq</h2>
-                    <p class="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
-                  </div>
+
+                    <SubNav />
+
+
+
+
+                    <StudentCart />
+                    <StudentCart />
+                    <StudentCart />
                 </div>
-
-                <div class="cart-p2 d-flex flex-column">
-                  <h2 class="status">status</h2>
-                  <p class="status-details">Available </p>
-                </div>
-              </div>
-        
-              <div class="cart d-flex  flex-wrap justify-content-between">
-
-                <div class="d-flex cart-p1">
-                  <div class="cart-pic">
-                    <img src="ProfilePhoto (1).jpg" alt="profile-pic" />
-                  </div>
-                  <div class="cart-heading-details">
-                    <h2 class="cart-heading">Hunzala Mushtaq</h2>
-                    <p class="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
-                  </div>
-                </div>
-
-                <div class="cart-p2 d-flex flex-column">
-                  <h2 class="status">status</h2>
-                  <p class="status-details">Available </p>
-                </div>
-              </div>
-              <div class="cart d-flex  flex-wrap justify-content-between">
-
-                <div class="d-flex cart-p1">
-                  <div class="cart-pic">
-                    <img src="ProfilePhoto (1).jpg" alt="profile-pic" />
-                  </div>
-                  <div class="cart-heading-details">
-                    <h2 class="cart-heading">Hunzala Mushtaq</h2>
-                    <p class="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
-                  </div>
-                </div>
-
-                <div class="cart-p2 d-flex flex-column">
-                  <h2 class="status">status</h2>
-                  <p class="status-details">Available </p>
-                </div>
-              </div>
+                    <Pagination />
 
             </div>
 
-          </div>
-          <div class="container Pagination-flex">
-            <div class="pagination">
-              <a href="#">&laquo;</a>
-              <a href="#" class="active">1</a>
-              <a href="#" >2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">&raquo;</a>
-            </div></div>
-        </div>
-            
+
 
         </>
 
     )
 }
 
-export default DashboardCompany
+export default DashboardCompany;
 
+export function Pagination() {
+    return (
+        <div className="container Pagination-flex">
+            <div className="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#" class="active">1</a>
+                <a href="#" >2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">&raquo;</a>
+            </div>
+            </div>
+    )
+}
 
+export function StudentCart() {
+    return (
+        <div class="cart d-flex  flex-wrap justify-content-between">
+ 
+                 <div class="d-flex cart-p1">
+                   <div class="cart-pic">
+                     <img src={require("assets/img/default-avatar.png").default} alt="profile-pic" />
+                   </div>
+                   <div class="cart-heading-details">
+                     <h2 class="cart-heading">Hunzala Mushtaq</h2>
+                     <p class="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
+                   </div>
+                 </div>
+ 
+                 <div class="cart-p2 d-flex flex-column">
+                   <h2 class="status">status</h2>
+                   <p class="status-details">Available </p>
+                 </div>
+               </div>
+    )
+}
 
 
 export function SubNav() {
