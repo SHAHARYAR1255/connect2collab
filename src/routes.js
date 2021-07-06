@@ -14,6 +14,9 @@ import MentorProfileDetail from './components/MentorProfileDetail/MentorProfileD
 import CompanyProfileDetail from './components/CompanyProfileDetail/CompanyProfileDetail';
 import Communities from 'views/Communities/Communities';
 import Messages from 'views/Messages/Messages';
+import PostedInternships from "components/PostedInternships";
+import InternshipDetail from "components/InternshipDetail";
+
 
 export const studentRoutes = [
   {
@@ -23,6 +26,14 @@ export const studentRoutes = [
     component: DashboardStudent,
     layout: "/admin",
     hide: false,
+  },
+  {
+    path: "/intersnhip-detail/:id",
+    name: "Intersnhip- detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: InternshipDetail,
+    layout: "/admin",
+    hide: true,
   },
   {
     path: "/mentor/:id",
@@ -179,6 +190,22 @@ export const mentorRoutes = [
   },
 ];
 export const companyRoutes = [
+  {
+    path: "/intersnhip-detail/:id",
+    name: "Intersnhip- detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: InternshipDetail,
+    layout: "/admin",
+    hide: true,
+  },
+  {
+    path: "/posted-internships",
+    name: "Posted Internships",
+    icon: "nc-icon nc-chart-pie-35",
+    component: PostedInternships,
+    layout: "/admin",
+    hide: true
+  },
   {
     path: "/dashboard",
     name: "Dashboard compny",

@@ -17,7 +17,7 @@ function Admin({role}) {
   const [hasImage, setHasImage] = React.useState(true);
   const location = useLocation();
   const mainPanel = React.useRef(null);
-  let routes = null ;
+  let routes = [] ;
   if(role === 'student') routes = studentRoutes;
   if(role === 'mentor') routes = mentorRoutes;
   if(role === 'company') routes = companyRoutes;
@@ -56,6 +56,7 @@ function Admin({role}) {
         <Sidebar color={color} image={hasImage ? image : ""} routes={routes} />
         <div className="main-panel" ref={mainPanel}>
           <AdminNavbar />
+          
           <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
           </div> 
