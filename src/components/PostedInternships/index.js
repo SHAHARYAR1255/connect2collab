@@ -3,7 +3,7 @@ import React from 'react'
 function PostedInternships() {
     return (
         <div>
-            POsted Internships
+            POsted Internships with surge
         </div>
     )
 }
