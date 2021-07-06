@@ -3,10 +3,17 @@ import React, { Component } from "react";
 import { useLocation, NavLink } from "react-router-dom";
 
 import { Nav } from "react-bootstrap";
+import sidebarImage from "assets/img/sidebar-3.jpg";
 
 import logo from "assets/img/reactlogo.png";
 
-function Sidebar({ color, image, routes }) {
+function Sidebar({  image,routes, color }) {
+  // const user = useSelector((state) => state.auth.authData);
+
+
+  // // only show nav when logged in
+  // if (!user) return null;
+
   routes = routes.filter((prop) =>{
     console.log(prop, 'route');
     return prop.hide !== true
@@ -17,7 +24,7 @@ function Sidebar({ color, image, routes }) {
     return location.pathname.indexOf(routeName) > -1 ? "active" : "";
   };
   return (
-    <div className="sidebar" data-image={image} data-color={color}>
+    <div className="sidebar" data-image={sidebarImage} data-color="black">
       <div
         className="sidebar-background"
         style={{

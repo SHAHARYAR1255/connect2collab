@@ -1,74 +1,248 @@
-import React from 'react';
+import React from "react";
+import ChartistGraph from "react-chartist";
+import { NavLink } from 'react-router-dom';
 
-import './DashboardCompany.css';
+// react-bootstrap components
+import {
+    Badge,
+    Button,
+    Card,
+    Navbar,
+    Nav,
+    Table,
+    Container,
+    Row,
+    Col,
+    Form,
+    OverlayTrigger,
+    Tooltip,
+} from "react-bootstrap";
 
 function DashboardCompany() {
     return (
         <>
-            <div className="row">
-
-                <div className="col-lg-4  col-md-6 col-sm-6">
-                    <div className="card card-stats">
-                        <div className="card-body ">
-                            <div className="row">
-                                <div className="col-5 col-md-4">
-                                    <div className="icon-big text-center icon-warning">
-                                        <i className="nc-icon nc-vector text-danger"></i>
-                                    </div>
+            <Container fluid>
+                <Row>
+                    <Col lg="3" sm="6">
+                        <Card className="card-stats">
+                            <Card.Body><NavLink to="/admin/posted-internships">
+                                <Row>
+                                    <Col xs="5">
+                                        <div className="icon-big text-center icon-warning">
+                                            <i className="nc-icon nc-chart text-warning"></i>
+                                        </div>
+                                    </Col>
+                                    <Col xs="7">
+                                        <div className="numbers">
+                                            {/* <p className="card-category">Posted Jobs</p> */}
+                                            <Card.Title as="h4">Posted Jobs</Card.Title>
+                                        </div>
+                                    </Col>
+                                </Row></NavLink>
+                            </Card.Body>
+                            <Card.Footer>
+                                <hr></hr>
+                                <div className="stats">
+                                    <i className="fas fa-redo mr-1"></i>
+                                    Update Now
                                 </div>
-                                <div className="col-7 col-md-8">
-                                    <div className="numbers">
-                                        <p className="card-category">Errors</p>
-                                        <p className="card-title">23
-                                  </p>
-                                    </div>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                    <Col lg="3" sm="6">
+                        <Card className="card-stats">
+                            <Card.Body><NavLink to="/admin/">
+                                <Row>
+                                    <Col xs="5">
+                                        <div className="icon-big text-center icon-warning">
+                                            <i className="nc-icon nc-light-3 text-success"></i>
+                                        </div>
+                                    </Col>
+                                    <Col xs="7">
+                                        <div className="numbers">
+                                            {/* <p className="card-category">Revenue</p> */}
+                                            <Card.Title as="h4">Review Applicants</Card.Title>
+                                        </div>
+                                    </Col>
+                                </Row></NavLink>
+                            </Card.Body>
+                            <Card.Footer>
+                                <hr></hr>
+                                <div className="stats">
+                                    <i className="far fa-calendar-alt mr-1"></i>
+                                    Last day
                                 </div>
-                            </div>
-                        </div>
-                        <div className="card-footer ">
-                            <hr />
-                            <div className="stats">
-                                <i className="fa fa-clock-o"></i>
-                              In the last hour
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4 col-md-6 col-sm-6">
-                    <div className="card card-stats">
-                        <div className="card-body ">
-                            <div className="row">
-                                <div className="col-5 col-md-4">
-                                    <div className="icon-big text-center icon-warning">
-                                        <i className="nc-icon nc-favourite-28 text-primary"></i>
-                                    </div>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                    <Col lg="3" sm="6">
+                        <Card className="card-stats">
+                            <Card.Body><NavLink to="/admin/post-internship">
+                                <Row>
+                                    <Col xs="2">
+                                        <div className="icon-big text-center icon-warning">
+                                            <i className="nc-icon nc-vector text-danger"></i>
+                                        </div>
+                                    </Col>
+                                    <Col xs="10">
+                                        <div className="numbers">
+                                            {/* <p className="card-category">Post Job/Internship</p> */}
+                                            <Card.Title as="h4">Post Internship / Job</Card.Title>
+                                        </div>
+                                    </Col>
+                                </Row></NavLink>
+                            </Card.Body>
+                            <Card.Footer>
+                                <hr></hr>
+                                <div className="stats">
+                                    <i className="far fa-clock-o mr-1"></i>
+                                    In the last hour
                                 </div>
-                                <div className="col-7 col-md-8">
-                                    <div className="numbers">
-                                        <p className="card-category">Followers</p>
-                                        <p className="card-title">+45K
-                                  </p>
-                                    </div>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                    <Col lg="3" sm="6">
+                        <Card className="card-stats">
+                            <Card.Body><NavLink to="/admin/">
+                                <Row>
+                                    <Col xs="5">
+                                        <div className="icon-big text-center icon-warning">
+                                            <i className="nc-icon nc-favourite-28 text-primary"></i>
+                                        </div>
+                                    </Col>
+                                    <Col xs="7">
+                                        <div className="numbers">
+                                            <p className="card-category">Followers</p>
+                                            <Card.Title as="h4">+45K</Card.Title>
+                                        </div>
+                                    </Col>
+                                </Row></NavLink>
+                            </Card.Body>
+                            <Card.Footer>
+                                <hr></hr>
+                                <div className="stats">
+                                    <i className="fas fa-redo mr-1"></i>
+                                    Update now
                                 </div>
-                            </div>
-                        </div>
-                        <div className="card-footer ">
-                            <hr />
-                            <div className="stats">
-                                <i className="fa fa-refresh"></i>
-                              Update now
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <HiredComponent />
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md="8">
+                        <Card>
+                            <Card.Header>
+                                <Card.Title as="h4">Users Behavior</Card.Title>
+                                <p className="card-category">24 Hours performance</p>
+                            </Card.Header>
+                            <Card.Body>
+                                <div className="ct-chart" id="chartHours">
+                                    <ChartistGraph
+                                        data={{
+                                            labels: [
+                                                "9:00AM",
+                                                "12:00AM",
+                                                "3:00PM",
+                                                "6:00PM",
+                                                "9:00PM",
+                                                "12:00PM",
+                                                "3:00AM",
+                                                "6:00AM",
+                                            ],
+                                            series: [
+                                                [287, 385, 490, 492, 554, 586, 698, 695],
+                                                [67, 152, 143, 240, 287, 335, 435, 437],
+                                                [23, 113, 67, 108, 190, 239, 307, 308],
+                                            ],
+                                        }}
+                                        type="Line"
+                                        options={{
+                                            low: 0,
+                                            high: 800,
+                                            showArea: false,
+                                            height: "245px",
+                                            axisX: {
+                                                showGrid: false,
+                                            },
+                                            lineSmooth: true,
+                                            showLine: true,
+                                            showPoint: true,
+                                            fullWidth: true,
+                                            chartPadding: {
+                                                right: 50,
+                                            },
+                                        }}
+                                        responsiveOptions={[
+                                            [
+                                                "screen and (max-width: 640px)",
+                                                {
+                                                    axisX: {
+                                                        labelInterpolationFnc: function (value) {
+                                                            return value[0];
+                                                        },
+                                                    },
+                                                },
+                                            ],
+                                        ]}
+                                    />
+                                </div>
+                            </Card.Body>
+                            <Card.Footer>
+                                <div className="legend">
+                                    <i className="fas fa-circle text-info"></i>
+                                    Open <i className="fas fa-circle text-danger"></i>
+                                    Click <i className="fas fa-circle text-warning"></i>
+                                    Click Second Time
+                                </div>
+                                <hr></hr>
+                                <div className="stats">
+                                    <i className="fas fa-history"></i>
+                                    Updated 3 minutes ago
+                                </div>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                    <Col md="4">
+                        <Card>
+                            <Card.Header>
+                                <Card.Title as="h4">Email Statistics</Card.Title>
+                                <p className="card-category">Last Campaign Performance</p>
+                            </Card.Header>
+                            <Card.Body>
+                                <div
+                                    className="ct-chart ct-perfect-fourth"
+                                    id="chartPreferences"
+                                >
+                                    <ChartistGraph
+                                        data={{
+                                            labels: ["40%", "20%", "40%"],
+                                            series: [40, 20, 40],
+                                        }}
+                                        type="Pie"
+                                    />
+                                </div>
+                                <div className="legend">
+                                    <i className="fas fa-circle text-info"></i>
+                                    Open <i className="fas fa-circle text-danger"></i>
+                                    Bounce <i className="fas fa-circle text-warning"></i>
+                                    Unsubscribe
+                                </div>
+                                <hr></hr>
+                                <div className="stats">
+                                    <i className="far fa-clock"></i>
+                                    Campaign sent 2 days ago
+                                </div>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
         </>
-
-    )
+    );
 }
 
-export default DashboardCompany
+export default DashboardCompany;
+
 
 
 export function HiredComponent() {
@@ -81,51 +255,51 @@ export function HiredComponent() {
                     <Cart />
                     <Cart />
                     <Cart />
-=               </div>
+                    =               </div>
             </div>
         </>
     )
 }
 
-export function SubNav() {
-    return (
-        <ul className="nav justify-content-around sticky-top sub-nav ">
+// export function SubNav() {
+//     return (
+//         <ul className="nav justify-content-around sticky-top sub-nav ">
 
 
-            <li className="nav-item">
-                <a className="nav-link active active-link" href="#">Hired</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">Review Application </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">Post Internship / Jobs </a>
-            </li>
-        </ul>
-    )
-}
+//             <li className="nav-item">
+//                 <a className="nav-link active active-link" href="#">Hired</a>
+//             </li>
+//             <li className="nav-item">
+//                 <a className="nav-link" href="#">Review Application </a>
+//             </li>
+//             <li className="nav-item">
+//                 <a className="nav-link" href="#">Post Internship / Jobs </a>
+//             </li>
+//         </ul>
+//     )
+// }
 
 export const Cart = () => {
     return (
         <div className="cart d-flex  flex-wrap justify-content-between">
 
-        <div className="d-flex cart-p1">
-            <div className="cart-pic">
-                <img src={
-                    require("assets/img/default-avatar.png")
-                      .default
-                  }  alt="profile-pic" />
+            <div className="d-flex cart-p1">
+                <div className="cart-pic">
+                    <img src={
+                        require("assets/img/default-avatar.png")
+                            .default
+                    } alt="profile-pic" />
+                </div>
+                <div className="cart-heading-details">
+                    <h2 className="cart-heading">Hunzala Mushtaq</h2>
+                    <p className="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
+                </div>
             </div>
-            <div className="cart-heading-details">
-                <h2 className="cart-heading">Hunzala Mushtaq</h2>
-                <p className="cart-details">Lot voluptates dolore cumque nesciunt est.</p>
-            </div>
-        </div>
 
-        <div className="cart-p2 d-flex flex-column">
-            <h2 className="status">status</h2>
-            <p className="status-details">Available </p>
+            <div className="cart-p2 d-flex flex-column">
+                <h2 className="status">status</h2>
+                <p className="status-details">Available </p>
+            </div>
         </div>
-    </div>
     )
 }
