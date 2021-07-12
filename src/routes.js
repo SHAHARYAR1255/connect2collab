@@ -1,6 +1,5 @@
-import Dashboard from "views/Dashboard.js";
 import UserProfile from "views/UserProfile.js";
-import Notifications from "views/Notifications.js";
+import Notifications from "views/Notifications/Notification.js";
 import Students from 'views/Students/Students.js'
 import Mentors from 'views/Mentors/Mentors.js'
 import Companies from 'views/Companies/Companies.js'
@@ -15,7 +14,7 @@ import CompanyProfileDetail from './components/CompanyProfileDetail/CompanyProfi
 import Communities from 'views/Communities/Communities';
 import Messages from 'views/Messages/Messages';
 import PostedInternships from "components/PostedInternships";
-import InternshipDetail from "components/InternshipDetail";
+import InternshipDetail from "views/Internship/InternshipDetail";
 
 
 export const studentRoutes = [
@@ -28,18 +27,18 @@ export const studentRoutes = [
     hide: false,
   },
   {
-    path: "/intersnhip-detail/:id",
-    name: "Intersnhip- detail",
-    icon: "nc-icon nc-chart-pie-35",
-    component: InternshipDetail,
-    layout: "/admin",
-    hide: true,
-  },
-  {
     path: "/mentor/:id",
     name: "Mentor Profile Detail",
     icon: "nc-icon nc-chart-pie-35",
     component: MentorProfileDetail,
+    layout: "/admin",
+    hide: true,
+  },
+  {
+    path: "/internship-detail/:id",
+    name: "Mentor Profile Detail",
+    icon: "nc-icon nc-chart-pie-35",
+    component: InternshipDetail,
     layout: "/admin",
     hide: true,
   },

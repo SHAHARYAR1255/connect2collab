@@ -3,12 +3,15 @@ import React, { Component } from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { Navbar, Container, Nav, Dropdown, Button } from "react-bootstrap";
 import {useSelector, useDispatch } from 'react-redux';
+import { LOGOUT } from "constants/actionTypes";
 
 // import routes from "routes.js";
 
 function Header() {
   const history = useHistory();
   const location = useLocation();
+  const dispatch = useDispatch();
+
   const mobileSidebarToggle = (e) => {
     e.preventDefault();
     document.documentElement.classList.toggle("nav-open");
@@ -21,9 +24,10 @@ function Header() {
     document.body.appendChild(node);
   };
   const logout = (e) => {
+    console.log('logging out...')
     e.preventDefault();
-    localStorage.clear();
     console.log('logout');
+    dispatch({type: LOGOUT });
     history.push('/auth');
   }
   const getBrandText = () => {
@@ -72,7 +76,7 @@ function Header() {
             <Nav.Item>
               <Nav.Link
                 className="m-0"
-                href="#pablo"
+                // href="#pablo"
                 onClick={(e) => logout(e)}
               >
                 <span className="no-icon">Log out</span>
