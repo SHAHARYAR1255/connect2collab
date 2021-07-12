@@ -27,7 +27,7 @@ export const studentRoutes = [
     hide: false,
   },
   {
-    path: "/mentor/:id",
+    path: "/mentors/:id",
     name: "Mentor Profile Detail",
     icon: "nc-icon nc-chart-pie-35",
     component: MentorProfileDetail,
@@ -121,7 +121,7 @@ export const mentorRoutes = [
     layout: "/admin",
   },
   {
-    path: "/mentor/:id",
+    path: "/mentors/:id",
     name: "Mentor Profile Detail",
     icon: "nc-icon nc-chart-pie-35",
     component: MentorProfileDetail,
@@ -221,7 +221,7 @@ export const companyRoutes = [
     hide: true,
   },
   {
-    path: "/mentor/:id",
+    path: "/mentors/:id",
     name: "Mentor Profile Detail",
     icon: "nc-icon nc-chart-pie-35",
     component: MentorProfileDetail,
