@@ -7,7 +7,7 @@ export const getStudents = () => async (dispatch) => {
         dispatch({ type: STUDENTS_LOADING });
 
         const { data } = await api.fetchStudents();
-        console.log(data);
+        console.log(data, 'at action');
 
         dispatch({ type: FETCH_STUDENTS, payload: data })
     }

@@ -13,7 +13,7 @@ function MentorProfileDetail() {
                             </div>
                             <div className="card-body">
                                 <div className="profilecard">
-                                <img src={
+                                    <img src={
                                         require("assets/img/default-avatar.png")
                                             .default
                                     } className="card-img-top avatar border-grey "
@@ -23,9 +23,9 @@ function MentorProfileDetail() {
                                 </div>
                                 <p className="description text-center">
                                     This is my description
-                                         <br />
-                                         in two lines
-                                     </p>
+                                    <br />
+                                    in two lines
+                                </p>
                             </div>
                             <hr />
                             <div className="button-container mr-auto ml-auto">
@@ -73,12 +73,32 @@ function MentorProfileDetail() {
                                     <div className="col-8 pr-0 pl-0">
                                         <p>Karachi,Pakistan</p>
                                     </div>
+                                </div><div className="row">
+                                    <div className="col-4">
+                                        <p className="font-weight-bold">Location</p>
+                                    </div>
+                                    <div className="col-8 pr-0 pl-0">
+                                        <p>Karachi,Pakistan</p>
+                                    </div>
+                                </div><div className="row">
+                                    <div className="col-4">
+                                        <p className="font-weight-bold">Location</p>
+                                    </div>
+                                    <div className="col-8 pr-0 pl-0">
+                                        <p>Karachi,Pakistan</p>
+                                    </div>
+                                </div><div className="row">
+                                    <div className="col-4">
+                                        <p className="font-weight-bold">Location</p>
+                                    </div>
+                                    <div className="col-8 pr-0 pl-0">
+                                        <p>Karachi,Pakistan</p>
+                                    </div>
                                 </div>
-
                             </div>
 
                         </div>
-                        <p><a href="#" className="bg-info text-light">Resume</a></p>
+                        {/* <p><a href="#" className="bg-info text-light">Resume</a></p> */}
                     </div>
                     <div className="col-md-8 offset-md-4">
                         <div className="card card-skill">
@@ -91,6 +111,7 @@ function MentorProfileDetail() {
                             </div>
                         </div>
                     </div>
+                    
                     <div className="col-md-8  offset-md-4 ">
                         <div className="card card-experience">
                             <div className="card-body">

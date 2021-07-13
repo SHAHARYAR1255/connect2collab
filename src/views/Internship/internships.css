@@ -1,0 +1,298 @@
+.cs_search{
+    margin-left: 5%;
+ }
+ 
+ .cs_job_container{
+     border-top: 5px groove#d34deb;
+     padding: 2% 2% 2% 2% !important;
+    background: white !important; 
+    margin :3% 5% 3% 10% !important;
+     width:80% !important;
+    font-size: 17px !important;
+     color:black!important;
+     border-radius: 2% !important;
+     transition: 0.4s !important;
+ 
+     -moz-box-shadow:    3px 3px 5px 6px #ccc; 
+   -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+   box-shadow:         2px 2px 3px 3px #ccc;
+  }
+ .cs_job_container:hover{
+     transform: scale(1.02) !important;
+     box-shadow:2px 2px 5px 5px #ccc;
+  
+  }
+    
+ @media screen and (max-width:670px){
+    .cs_job_container{
+       font-size: small !important;
+       width: 90% !important;
+       height: 50% !important;
+       margin:7% 5% 10% 5% !important;
+    }
+    .cs_job_button{
+    width: 500px !important ;
+    }
+ } 
+ @media screen and (min-width:670px){ 
+    .cs_job_button{
+    width: 500px !important ;
+    }}
+ @media screen and(max-width:930px){
+    .cs_skill_row{
+       display: block !important;
+    }
+    .cs_skill_container{
+       display: block !important;
+    }
+ }
+ @media screen and(min-width:920px){
+    .cs_skill_row{
+       display: block !important;
+    }
+ }
+  
+  .cs_company_name{
+    border-right: 2px groove rgb(255, 255, 255) !important;
+  }
+ 
+  .skill_container {
+     margin-top:1.5% !important;
+    width: 100% !important;
+    background-color: rgb(192, 192, 192) !important;
+    height: 13px !important;
+    border-radius: 5% !important;
+   
+  }
+  
+   .skills {
+     font-size: 12px !important;
+    text-align: right !important;
+    color: white !important;  
+    margin-left: -25% !important;
+   
+    
+  }
+  
+  .skill1 {width: 95%; background-color: #c51162; height: 13px;margin-left: -7% !important ; }
+  .skill2 {width: 70%; background-color: #d500f9 ;  height: 13px;margin-left: -7% !important; }
+  .skill3 {width: 70%; background-color:#00bfa5; height: 13px;margin-left: -7% !important; }
+  .skill4 {width: 30%; background-color:#ff8a65   ;  height: 13px;margin-left: -7% !important; }
+ 
+ 
+  .cs_skill_row{
+     padding:2% 2% 2% 2% !important;
+  }
+ 
+  .cs_job_button,.cs_button{
+     background: linear-gradient(180deg,#af20c9,#e360fa);
+     margin-left:5% !important;  
+     width: 20% !important;
+     color: white !important;
+     font-size: 90% !important;
+     padding: -1% -1% -1% -1% !important;
+  }
+  .cs_job_button:hover,.cs_button:hover{
+     background-color: #8f2c59 !important;
+  }
+  
+ .cs_company_name h5{
+    color:black !important;
+ }
+ .cs_heading_3{
+    margin-left: 30%;
+    margin-top: -1% !important;
+ }
+ @media  only screen and (max-width:770px) {
+    .cs_heading_3{
+    margin-left: 20% !important;
+ }}
+ @media  only screen and (max-width:600px) {
+    .cs_heading_3{
+    margin-left: 15% !important;
+    /* font-size: 16px !important; */
+ }
+ 
+ .cs_job_button,.cs_button{
+   padding: -1% -1% -1% -1% !important;
+ }
+ }
+  
+ @media  only screen and (max-width:770px) {
+    .cs_company_name{border-right: none !important;}
+ 
+    .skill_container{
+       width: 60% !important;
+       margin: 0% 5% 0% 13% !important;    
+    }
+    
+    .skill1,.skill2,.skill3,.skill4{
+       margin-left: 50% !important;
+    }
+    .skills{
+       
+       width: 80% !important;
+       margin: 0% 5% 0% 5% !important;
+       margin-left: -7% !important;
+ 
+    }
+    .cs_skill_name{
+       margin-left: 5% !important;
+      } 
+      
+    .cs_job_button{
+       margin: 5% 5% 3% 15% !important;
+       width: 70% !important;
+       padding: 2% 2% 2% 2% !important;
+    }  
+    .cs_job_detail{
+       padding: 1% 1% 1% 1% !important;
+       width: 200% !important;
+    }
+    .cs_skill_button{
+       margin: 1% 1% 1% 1% !important;
+       padding: 1.5% 3% 1.5% 3%;
+    }
+    
+ 
+ }
+ 
+ .cs_f_image{
+    
+    width:70% !important;
+    height: 20% !important;
+ }
+ 
+ .cs_job_detail{
+     margin: 2% 5% 2% 5% !important;
+     padding:  5% 5% 5% 5% !important;
+     font-size: 15px !important;
+     width: 90% !important;
+     
+     background-color: white !important;
+     transition: 0.5s;
+     color:rgb(82, 78, 78) !important;
+     border-radius:2% !important;
+  }
+  @media  only screen and (max-width:770px) {
+    .cs_job_detail{
+       width: 100% !important;
+       margin: 1% -1% 1% -1% !important;
+    }
+    .cs_jobdetail_skill{
+       width: 130% !important;
+    }
+  }
+  .cs_jobdetail_skill{
+     margin:0% 0% 0% -3% !important;
+     width: 70% !important;
+     
+  }
+ 
+  
+  .cs_skill_button{
+     
+     transition: 0.4s;
+     padding: 2% 3.5% 2% 3.5%;
+    margin:1% 2.5% 1% 2.5%;
+    border-radius: 10%;
+    border-color:rgb(167, 165, 165) !important ;
+  }
+  
+  .cs_skill_button:hover{
+     color: white;
+     background:rgb(167, 165, 165);
+  }
+  
+  .cs_button_rows div{
+    margin:0% 0% 3% 3% !important;
+  }
+ 
+ 
+  /* MHANOOR CODE */
+ 
+  .card-user .card-image {
+    height: 110px;
+  }
+  .card .card-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transform-style: preserve-3d;
+  }
+  .card-user .card-body {
+    min-height: 200px;
+  }
+  
+  .card-skill{
+    margin-top: -70px;
+  }
+  .card-user .profilecard {
+    text-align: center;
+    text-transform: none;
+    margin-top: -70px;
+  }
+  .card .profilecard{
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .card-user .avatar.border-gray {
+    border-color: #EEEEEE;
+  }
+  .card .description {
+    font-size: 14px;
+    color: #333;
+  }
+ 
+  .card-details .card-body  {
+    min-height: 350px;
+  }
+  .resumeBtn p a {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  .card-details .card-experience{
+    width: 600px;
+    float: inline-end;
+  }
+  
+  @media (max-width:768px) {
+    .card-details{
+      width: 100%;
+      float: none;
+    }
+    .card-skill{
+      margin-top: 0px;
+    }
+  }
+  
+  .cs_job_detail_2{
+      margin-bottom: 7% !important;
+  }
+  @media  only screen and (max-width:600px) {
+    .cs_job_detail_2{
+        margin-bottom: 1% !important;
+    } 
+  }
+   /* .card-user .avatar {
+    width: 124px;
+    height: 124px;
+    border: 5px solid #FFFFFF;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .card .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+  } */
+  

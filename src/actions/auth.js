@@ -16,9 +16,9 @@ export const signin = (formData, router) => async (dispatch) => {
 export const signup = (formData, router) => async (dispatch) => {
   try {
     console.log(formData, "before signup");
-    const { data } = await api.signUp(formData);
+    // const { data } = await api.signUp(formData);
 
-    dispatch({ type: AUTH, data });
+    dispatch({ type: AUTH, data: formData });
 
     router.push('/admin/dashboard');
   } catch (error) {

@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css';
 import {NavLink} from 'react-router-dom';
 
-function Card({ name, bio, role, id }) {
+function Card({ firstname, lastname, bio, role, id }) {
     return (
         <div className="col">
             <div className="card h-100">
@@ -12,7 +12,7 @@ function Card({ name, bio, role, id }) {
                 } alt="mentor" className="icon_1 image-fluid" />
 
                 <div className="card-body">
-                    <h5 className="card-title text-center c1_head">{name}</h5>
+                    <h5 className="card-title text-center c1_head">{firstname} {lastname}</h5>
                     <p className="card-text text-center text-dark">{bio}</p>
                     <div className="container text-center">
                         <button type="button"
